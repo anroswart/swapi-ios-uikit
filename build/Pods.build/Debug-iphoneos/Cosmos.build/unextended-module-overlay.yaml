@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/anroswart/iOS Projects/mvvm-test-1/build/Debug-iphoneos/Cosmos/Cosmos.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/anroswart/iOS Projects/mvvm-test-1/build/Pods.build/Debug-iphoneos/Cosmos.build/unextended-module.modulemap',
+    }]
+  }]
+}
