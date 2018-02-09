@@ -37,8 +37,8 @@ class FilmDetailVC: UIViewController {
         crawlText!.backgroundColor = filmCrawlingText.backgroundColor
         crawlText!.textColor = filmCrawlingText.textColor
         crawlText!.font = filmCrawlingText.font
-        //crawlText!.contentSize = filmCrawlingText.contentSize
-        crawlText!.contentSize = rc.size
+        crawlText!.contentSize = filmCrawlingText.contentSize
+        crawlText!.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         crawlText!.isEditable = false
         crawlText!.isScrollEnabled = false
         crawlText!.textAlignment = .center
@@ -51,6 +51,7 @@ class FilmDetailVC: UIViewController {
         crawlText!.layer.transform = transform
         
         filmCrawlPlaceholder.addSubview(crawlText!)
+        filmCrawlPlaceholder.clipsToBounds = true
     }
     
     // Credits style animation
@@ -75,6 +76,8 @@ class FilmDetailVC: UIViewController {
         filmRating.rating = viewModel!.film.rating! / 2
         loopCrawlingText(textView: crawlText!)
     }
+    
+    /// Mark - Handle back button
     
     @IBAction func backPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)

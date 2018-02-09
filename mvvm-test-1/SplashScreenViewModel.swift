@@ -35,7 +35,6 @@ class SplashScreenViewModel: NSObject {
                         self.getFilmCharacters(forFilm: self.films[index]) { filmWC in
                             serialQueue.async {
                                 self.films[index].characters = filmWC.characters!
-                                print(self.films[index].characters!)
                                 groupChars.leave()
                             }
                         }

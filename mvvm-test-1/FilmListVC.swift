@@ -30,6 +30,8 @@ class FilmListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableViewFilms.dataSource = self
     }
     
+    /// MARK - FilmList UITableView
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -47,6 +49,8 @@ class FilmListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             return FilmCell()
         }
     }
+    
+    /// Mark -  Transition to next VC
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: VCSegue.showFilmDetail.rawValue, sender: indexPath)

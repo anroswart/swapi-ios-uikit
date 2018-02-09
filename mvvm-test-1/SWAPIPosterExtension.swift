@@ -20,7 +20,7 @@ struct TMDBReturn: Decodable {
 }
 
 extension SWAPIService {
-    
+    // Search for specific film to capture poster and rating
     func searchFilms(title: String, complete: @escaping(_ success: Bool, _ imgUrl: String, _ rading: Double) -> Void) {
         DispatchQueue.global().async {
             let formatTitle = title.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
@@ -33,7 +33,6 @@ extension SWAPIService {
             var rating = 0.0
             
             let task = session.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) in
-                // Completion code
                 // Check for error
                 guard error == nil else {
                     print("Data Task Error")
@@ -45,7 +44,6 @@ extension SWAPIService {
                     return
                 }
                 
-                //print("\nSearch: \(title)")
                 //let dataString = String(data: data, encoding: .utf8)
                 //print("\n\(dataString!)")
                 
@@ -55,8 +53,7 @@ extension SWAPIService {
                     
                     imgUrl = SWAPIReturn.results[0].poster_path
                     rating = SWAPIReturn.results[0].vote_average
-                    //print(SWAPIReturn.results[0].title)
-                    //print(imgUrl)
+                    
                     if (!imgUrl.isEmpty) {
                         complete(true, imgUrl, rating)
                     }
@@ -64,15 +61,12 @@ extension SWAPIService {
                     print("Could not decode JSON:", jsonErr)
                     complete(false, imgUrl, rating)
                 }
-                
-                /*if let response = response {
-                 print(response)
-                 }*/
             })
             task.resume()
         }
     }
     
+    // Get poster from search results
     func getPosters(forTitle: String, complete: @escaping(_ success: Bool, _ image: UIImage, _ rating: Double) -> Void) {
         self.searchFilms(title: forTitle) { success, url, rating in
             if url.isEmpty {
@@ -82,6 +76,7 @@ extension SWAPIService {
             
             let functionUrl: String = "https://image.tmdb.org/t/p/w500\(url)"
             let url = URL(string: functionUrl)
+            
             URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
                 
                 if error != nil {

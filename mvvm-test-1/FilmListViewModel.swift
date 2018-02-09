@@ -16,8 +16,6 @@ class FilmListViewModel: NSObject {
     init(films: [Film], filmPosters: [FilmPoster]) {
         self.films = films
         self.filmPosters = filmPosters
-        
-        print(filmPosters)
     }
     
     func numberOfFilmsToDisplay(in section: Int) -> Int {

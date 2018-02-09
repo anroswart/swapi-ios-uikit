@@ -31,7 +31,6 @@ class SWAPIService: NSObject {
             var films = [Film]()
             
             let task = session.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) in
-                // Completion code
                 // Check for error
                 guard error == nil else {
                     print("Data Task Error")
@@ -49,27 +48,21 @@ class SWAPIService: NSObject {
                 do {
                     let SWAPIReturn = try
                         JSONDecoder().decode(SwapiFilmReturn.self, from: data)
-                    for Film in SWAPIReturn.results {
-                        //Fetch Characters for Film
-                        //print("\(Film.title)")
-                        
-                        films.append(Film)
-                        //print(Film.title)
+                    
+                    for film in SWAPIReturn.results {
+                        films.append(film)
                     }
                     complete(true, films)
                 } catch let jsonErr {
                     print("Could not decode JSON:", jsonErr)
                     complete(false, films)
                 }
-                
-                /*if let response = response {
-                    print(response)
-                }*/
             })
             task.resume()
         }
     }
     
+    //Using Grand Central Dispatch for array of Character URLs
     func fetchCharacters(charURLs: [String], complete: @escaping(_ success: Bool, _ filmChars: [String])->()) {
         var filmCharNames = [String]()
         let group = DispatchGroup()
@@ -84,13 +77,11 @@ class SWAPIService: NSObject {
                 // Check for error
                 guard error == nil else {
                     print("Data Task Error")
-                    //complete(false, films, nil)
                     return
                 }
                 
                 guard let data = data else {
                     print("No data returned")
-                    //complete(false, films, nil)
                     return
                 }
                 
@@ -100,70 +91,20 @@ class SWAPIService: NSObject {
                 do {
                     let SWAPIReturn = try
                         JSONDecoder().decode(SwapiCharReturn.self, from: data)
+                    
                     serialQueue.async {
                         filmCharNames.append(SWAPIReturn.name)
-                        //print(SWAPIReturn.name)
                         group.leave()
                     }
                 } catch let jsonErr {
                     print("Could not decode JSON:", jsonErr)
                     complete(false, filmCharNames)
                 }
-                
-                /*if let response = response {
-                 print(response)
-                 }*/
             })
             task.resume()
         }
         
         group.notify(queue: .main) {
-            complete(true, filmCharNames)
-        }
-    }
-    
-    func fetchCharactersOld(charURLs: [String], complete: @escaping(_ success: Bool, _ filmChars: [String])->()) {
-    
-        var filmCharNames = [String]()
-        DispatchQueue.global().sync {
-            for url in charURLs {
-                var request = URLRequest(url: URL(string: url)!)
-                request.httpMethod = "GET"
-                let session =  URLSession.shared
-                let task = session.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) in
-                    // Check for error
-                    guard error == nil else {
-                        print("Data Task Error")
-                        //complete(false, films, nil)
-                        return
-                    }
-                    
-                    guard let data = data else {
-                        print("No data returned")
-                        //complete(false, films, nil)
-                        return
-                    }
-                    
-                    //let dataString = String(data: data, encoding: .utf8)
-                    //print(dataString!)
-                    
-                    do {
-                        let SWAPIReturn = try
-                            JSONDecoder().decode(SwapiCharReturn.self, from: data)
-                        print(SWAPIReturn.name)
-                        filmCharNames.append(SWAPIReturn.name)
-                        
-                    } catch let jsonErr {
-                        print("Could not decode JSON:", jsonErr)
-                        complete(false, filmCharNames)
-                    }
-                    
-                    /*if let response = response {
-                     print(response)
-                     }*/
-                })
-                task.resume()
-            }
             complete(true, filmCharNames)
         }
     }
