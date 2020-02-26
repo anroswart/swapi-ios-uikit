@@ -32,7 +32,7 @@ class FilmListViewModel: NSObject {
         
         for poster in filmPosters {
             if poster.filmTitle == title {
-                index = filmPosters.index(of: poster)!
+                index = filmPosters.firstIndex(of: poster)!
             }
         }
         
