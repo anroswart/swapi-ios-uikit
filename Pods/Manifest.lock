@@ -1,12 +1,30 @@
 PODS:
-  - Cosmos (14.0.0)
+  - Cosmos (21.0.0)
+  - Realm (4.3.2):
+    - Realm/Headers (= 4.3.2)
+  - Realm/Headers (4.3.2)
+  - RealmSwift (4.3.2):
+    - Realm (= 4.3.2)
+  - StarWarsTextView (1.3.0)
 
 DEPENDENCIES:
-  - Cosmos (~> 14.0)
+  - Cosmos (~> 21.0)
+  - RealmSwift
+  - StarWarsTextView
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Cosmos
+    - Realm
+    - RealmSwift
+    - StarWarsTextView
 
 SPEC CHECKSUMS:
-  Cosmos: 6dd44b65d587033e690ae1c350c875d262a23fda
+  Cosmos: 3dfb6e4ba48bd48b8c9aa2a77048ae11ed114f96
+  Realm: 5e92902e2875dff4bb0fd02f67bb737c3d5db2bc
+  RealmSwift: 9a360fc7bae04fc2e308a34fbd899d5faa2d6b22
+  StarWarsTextView: 4077326628e2901048940f2287a044ba011b4a5e
 
-PODFILE CHECKSUM: f500284eec94ee2c336ce3ddc8401981d1ae36a0
+PODFILE CHECKSUM: 0a9b44b0ce721752c2b631d4c1121be3d8afe644
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.6.1
