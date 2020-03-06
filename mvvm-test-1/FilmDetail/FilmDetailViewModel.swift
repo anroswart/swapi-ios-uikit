@@ -16,7 +16,8 @@ class FilmDetailViewModel: NSObject {
     }
     
     var filmOpeningCrawl: String {
-        let newLines = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-        return "\(newLines)\(film.openingCrawl ?? "")"
+        guard let openingCrawl = film.openingCrawl else { return "" }
+        let newLines = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+        return "\(newLines)\(openingCrawl)"
     }
 }

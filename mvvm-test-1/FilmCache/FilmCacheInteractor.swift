@@ -10,11 +10,10 @@ class FilmCacheInteractor {
         }
     }()
     
-    func writeFilm(_ films: [Film]) {
+    func writeFilms(_ films: [Film]) {
         if let realm = realm {
             do {
                 try realm.write {
-//                    realm.deleteAll()
                     realm.add(films, update: .modified)
                 }
             } catch let error as NSError {

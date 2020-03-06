@@ -1,0 +1,27 @@
+{
+    "total_pages": 1,
+    "results": [
+        {
+            "id": 1894,
+            "adult": false,
+            "backdrop_path": "\/vovhXw10DSsRS9yoVbZqb60pXyX.jpg",
+            "original_title": "Star Wars: Episode II - Attack of the Clones",
+            "genre_ids": [
+                28,
+                12,
+                878
+            ],
+            "vote_average": 6.5,
+            "popularity": 16.733000000000001,
+            "poster_path": "\/2vcNFtrZXNwIcBgH5e2xXCmVR8t.jpg",
+            "title": "Star Wars: Episode II - Attack of the Clones",
+            "overview": "Following an assassination attempt on Senator Padmé Amidala, Jedi Knights Anakin Skywalker and Obi-Wan Kenobi investigate a mysterious plot that could change the galaxy forever.",
+            "original_language": "en",
+            "vote_count": 8268,
+            "release_date": "2002-05-15",
+            "video": false
+        }
+    ],
+    "total_results": 1,
+    "page": 1
+}

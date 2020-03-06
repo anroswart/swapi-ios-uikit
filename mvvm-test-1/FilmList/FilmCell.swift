@@ -9,17 +9,17 @@ class FilmCell: UITableViewCell {
     
     private lazy var placeholderPosterImage = UIImage(imageLiteralResourceName: "background")
     
-    func configureCell(with film: Film) {
+    func configureCell(with film: Film?) {
         filmPoster.image = posterImageFromData(in: film)
-        filmTitle.text = film.title
-        filmReleaseDate.text = film.releaseDate
-        filmDirectors.text = film.director
-        filmProducers.text = film.producer
+        filmTitle.text = film?.title
+        filmReleaseDate.text = film?.releaseDate
+        filmDirectors.text = film?.director
+        filmProducers.text = film?.producer
     }
     
-    func posterImageFromData(in film: Film) -> UIImage {
-        if let data = film.posterData {
-            return UIImage(data: data) ?? placeholderPosterImage
+    func posterImageFromData(in film: Film?) -> UIImage {
+        if let data = film?.posterData, let posterImage = UIImage(data: data) {
+            return posterImage
         }
         return placeholderPosterImage
     }

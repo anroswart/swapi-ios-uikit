@@ -4,9 +4,9 @@ struct TMDBSearchResponse: Decodable {
 }
 
 struct TMDBSearchResult: Decodable {
-    let title: String
-    let posterPath: String
-    let rating: Double
+    let title: String?
+    let posterPath: String?
+    let rating: Double?
     
     enum CodingKeys: String, CodingKey {
         case title

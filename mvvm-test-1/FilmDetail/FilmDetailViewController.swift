@@ -9,7 +9,7 @@ class FilmDetailViewController: UIViewController {
     @IBOutlet weak var filmRating: CosmosView!
     @IBOutlet weak var filmCrawlingTextPlaceholder: UIView!
     
-    var filmCrawlingText: StarWarsTextView = {
+    private var filmCrawlingText: StarWarsTextView = {
         let textView = StarWarsTextView()
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.backgroundColor = .black
@@ -25,19 +25,11 @@ class FilmDetailViewController: UIViewController {
         title = "Star Wars"
         navigationController?.view.backgroundColor = .black
         filmCrawlingText.starWarsDelegate = self
+        configureFilmCrawlingTextView()
         configureViewContents()
-        configureFilmCrawlingText()
     }
     
-    func configureViewContents() {
-        filmTitle.text = viewModel?.film.title
-        filmReleaseDate.text = viewModel?.film.releaseDate
-        filmCharacters.text = viewModel?.filmCharacters
-        filmCrawlingText.text = viewModel?.filmOpeningCrawl
-        filmRating.rating = viewModel?.filmRating ?? 0
-    }
-    
-    private func configureFilmCrawlingText() {
+    private func configureFilmCrawlingTextView() {
         filmCrawlingTextPlaceholder.backgroundColor = .black
         filmCrawlingTextPlaceholder.isUserInteractionEnabled = false
         filmCrawlingTextPlaceholder.addSubview(filmCrawlingText)
@@ -47,6 +39,14 @@ class FilmDetailViewController: UIViewController {
             filmCrawlingText.bottomAnchor.constraint(equalTo: filmCrawlingTextPlaceholder.bottomAnchor),
             filmCrawlingText.trailingAnchor.constraint(equalTo: filmCrawlingTextPlaceholder.trailingAnchor)])
         filmCrawlingTextPlaceholder.layoutIfNeeded()
+    }
+    
+    private func configureViewContents() {
+        filmTitle.text = viewModel?.film.title
+        filmReleaseDate.text = viewModel?.film.releaseDate
+        filmCharacters.text = viewModel?.filmCharacters
+        filmCrawlingText.text = viewModel?.filmOpeningCrawl
+        filmRating.rating = viewModel?.filmRating ?? 0
     }
     
     override func viewDidAppear(_ animated: Bool) {

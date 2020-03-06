@@ -8,7 +8,7 @@ fileprivate enum ReusableCellId: String {
     case filmCell
 }
 
-class FilmListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FilmListViewController: UIViewController {
     @IBOutlet weak var tableViewFilms: UITableView!
     
     var viewModel: FilmListViewModel?
@@ -20,32 +20,7 @@ class FilmListViewController: UIViewController, UITableViewDelegate, UITableView
         title = "Star Wars Films"
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel?.numberOfFilmsToDisplay(in: section) ?? 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if
-            let cell = tableViewFilms.dequeueReusableCell(withIdentifier: ReusableCellId.filmCell.rawValue, for: indexPath) as? FilmCell,
-            let film = viewModel?.filmToDisplay(at: indexPath) {
-            cell.configureCell(with: film)
-            return cell
-        } else {
-            fatalError("Unable to configure FillCell")
-        }
-    }
-    
-    // Mark - Transition
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: Segues.showFilmDetail.rawValue, sender: indexPath)
-    }
-    
-    // Configure FilmDetailViewController
+    // Inject FilmDetailViewController dependencies
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if
             let destination = (segue.destination as? UINavigationController)?.topViewController as? FilmDetailViewController,
@@ -56,4 +31,27 @@ class FilmListViewController: UIViewController, UITableViewDelegate, UITableView
     }
 }
 
+extension FilmListViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel?.numberOfFilmsToDisplay(in: section) ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableViewFilms.dequeueReusableCell(withIdentifier: ReusableCellId.filmCell.rawValue, for: indexPath)
+        (cell as? FilmCell)?.configureCell(with: viewModel?.filmToDisplay(at: indexPath))
+        return cell
+    }
+}
 
+extension FilmListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: Segues.showFilmDetail.rawValue, sender: indexPath)
+    }
+}

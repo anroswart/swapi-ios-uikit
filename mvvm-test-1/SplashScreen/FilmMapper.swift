@@ -2,18 +2,17 @@ import Foundation
 import RealmSwift
 
 class FilmMapper: NSObject {
-    private(set) var films = [Film]()
-    private var swapiService: SWAPIService
-    private lazy var filmCache: FilmCacheInteractor = {
-        return FilmCacheInteractor()
-    }()
+    private var swapiClient: SWAPIClient
+    private var filmCache: FilmCacheInteractor
+    var films = [Film]()
     
-    init(withService swapiService: SWAPIService) {
-        self.swapiService = swapiService
+    init(withSWAPIClient swapiClient: SWAPIClient = SWAPIClient(), filmCache: FilmCacheInteractor = FilmCacheInteractor()) {
+        self.swapiClient = swapiClient
+        self.filmCache = filmCache
     }
     
-    func getFilms(completion: @escaping (Error?) -> Void) {
-        swapiService.fetchFilms { (films, error) in
+    func fetchFilms(completion: @escaping (Error?) -> Void) {
+        swapiClient.fetchFilms { (films, error) in
             guard error == nil, let films = films else {
                 self.tryToRetrieveFilmsFromCache(networkError: error, withCompletion: completion)
                 return
@@ -26,7 +25,7 @@ class FilmMapper: NSObject {
         }
     }
     
-    private func tryToRetrieveFilmsFromCache(networkError: Error?, withCompletion completion: @escaping(Error?) -> Void) {
+    private func tryToRetrieveFilmsFromCache(networkError: Error?, withCompletion completion: @escaping (Error?) -> Void) {
         print("Unable to retieve films, trying cache")
         DispatchQueue.main.async {
             if let films = self.filmCache.sortedFilms(), films.count > 0 {
@@ -38,18 +37,14 @@ class FilmMapper: NSObject {
         }
     }
     
-    private func getFilmsCharactersAndDoPosterCall(withCompletion completion: @escaping(Error?) -> Void) {
+    private func getFilmsCharactersAndDoPosterCall(withCompletion completion: @escaping (Error?) -> Void) {
         let charactersDispatchGroup = DispatchGroup()
         for (index, film) in self.films.enumerated() {
             charactersDispatchGroup.enter()
             guard film.characterURLs.count > 0 else { charactersDispatchGroup.leave(); continue }
-            self.swapiService.fetchCharacters(characterURLs: Array(film.characterURLs)) { (filmCharacters, error) in
-                guard error == nil, let characters = filmCharacters else {
-                    charactersDispatchGroup.suspend()
-                    completion(error)
-                    return
-                }
-                self.films[index].characterList.append(objectsIn: characters)
+            self.swapiClient.fetchCharacters(characterURLs: Array(film.characterURLs)) { (filmCharacters, error) in
+                guard error == nil, let characters = filmCharacters else { charactersDispatchGroup.leave(); return }
+                DispatchQueue.main.async { self.films[index].characterList.append(objectsIn: characters) }
                 charactersDispatchGroup.leave()
             }
         }
@@ -58,24 +53,20 @@ class FilmMapper: NSObject {
         }
     }
     
-    private func getFilmsPostersAndRatings(withCompletion completion: @escaping(Error?) -> Void) {
+    private func getFilmsPostersAndRatings(withCompletion completion: @escaping (Error?) -> Void) {
         let filmPosterDispatchGroup = DispatchGroup()
         for (index, film) in self.films.enumerated() {
             filmPosterDispatchGroup.enter()
             guard let title = film.title else { filmPosterDispatchGroup.leave(); continue }
-            self.swapiService.getPostersAndRatings(forTitle: title) { (filmPosterData, rating, error) in
-                guard error == nil else {
-                    filmPosterDispatchGroup.suspend()
-                    completion(error)
-                    return
-                }
+            self.swapiClient.fetchPostersAndRatings(forTitle: title) { (filmPosterData, rating, error) in
+                guard error == nil else { filmPosterDispatchGroup.leave(); return }
                 self.films[index].posterData = filmPosterData
                 self.films[index].rating.value = rating
                 filmPosterDispatchGroup.leave()
             }
         }
         filmPosterDispatchGroup.notify(queue: .main) {
-            self.filmCache.writeFilm(self.films)
+            self.filmCache.writeFilms(self.films)
             completion(nil)
         }
     }
