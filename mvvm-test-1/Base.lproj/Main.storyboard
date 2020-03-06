@@ -210,7 +210,6 @@
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wKh-Tj-YqD" userLabel="Header">
                                 <rect key="frame" x="0.0" y="56" width="414" height="200"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="eL6-uc-L9O"/>
                                 </constraints>
@@ -237,7 +236,6 @@
                                     </stackView>
                                     <view userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="tm2-GK-hjR" userLabel="RatingView" customClass="CosmosView" customModule="Cosmos">
                                         <rect key="frame" x="278" y="0.0" width="120" height="50"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -266,7 +264,6 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wKh-Tj-YqD" firstAttribute="leading" secondItem="end-ir-8xu" secondAttribute="leading" id="14C-bM-AI0"/>
                             <constraint firstItem="eJU-cs-6Lz" firstAttribute="top" secondItem="pMA-tS-83L" secondAttribute="bottom" constant="8" id="6H0-ut-Ys0"/>

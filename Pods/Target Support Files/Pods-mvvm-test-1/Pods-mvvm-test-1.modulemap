@@ -1,4 +1,4 @@
-framework module Pods_mvvm_test_1 {
+module Pods_mvvm_test_1 {
   umbrella header "Pods-mvvm-test-1-umbrella.h"
 
   export *

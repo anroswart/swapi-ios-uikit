@@ -1,4 +1,4 @@
-framework module Pods_mvvm_test_1_UnitTests {
+module Pods_mvvm_test_1_UnitTests {
   umbrella header "Pods-mvvm-test-1-UnitTests-umbrella.h"
 
   export *

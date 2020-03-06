@@ -1,4 +1,4 @@
-framework module Cosmos {
+module Cosmos {
   umbrella header "Cosmos-umbrella.h"
 
   export *

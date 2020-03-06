@@ -14,8 +14,8 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "912E1620BDE5B1C9E89E4A0B51F39BF4"
-               BuildableName = "StarWarsTextView.framework"
+               BlueprintIdentifier = "35F6BDE59B6E4D9E45FF434319811883"
+               BuildableName = "libStarWarsTextView.a"
                BlueprintName = "StarWarsTextView"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
