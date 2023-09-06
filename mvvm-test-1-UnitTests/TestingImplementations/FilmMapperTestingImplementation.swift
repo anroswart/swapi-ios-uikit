@@ -1,6 +1,6 @@
 @testable import mvvm_test_1
 
-class FilmMapperTestingImplementation: FilmMapper {
+class FilmMapperTestingImplementation: FilmService {
     override var films: [Film] {
         didSet {
             removeSomeCharacters()

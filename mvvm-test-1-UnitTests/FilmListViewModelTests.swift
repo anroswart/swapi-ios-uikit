@@ -4,7 +4,7 @@ import RealmSwift
 
 class FilmListViewModelTests: XCTestCase {
     private var session: URLSessionMock!
-    private var filmMapper: FilmMapper!
+    private var filmMapper: FilmService!
     private var serviceUnderTest: FilmListViewModel!
 
     override func setUp() {

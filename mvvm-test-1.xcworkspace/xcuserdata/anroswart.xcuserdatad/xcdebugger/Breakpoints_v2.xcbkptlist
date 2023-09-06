@@ -3,4 +3,498 @@
    uuid = "122E53F5-5965-4BE4-AFC8-5BEE6C7EE685"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6268C167-4548-44A7-AEE4-18CBAAB300DC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mvvm-test-1/SplashScreen/SplashScreenViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "getFilmData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "58636302-9F72-4F09-9A8F-B8249136C904"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mvvm-test-1/SplashScreen/SplashScreenViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "getFilmData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "58636302-9F72-4F09-9A8F-B8249136C904 - 74da4a8dee3d7554"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mvvm_test_1.SplashScreenViewController.getFilmData() -&gt; ()"
+                  moduleName = "mvvm-test-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anroswart/Development/anro/mvvm-test-1/mvvm-test-1/SplashScreen/SplashScreenViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "63">
+               </Location>
+               <Location
+                  uuid = "58636302-9F72-4F09-9A8F-B8249136C904 - 67472bbb3c813e9a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in mvvm_test_1.SplashScreenViewController.getFilmData() -&gt; ()"
+                  moduleName = "mvvm-test-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anroswart/Development/anro/mvvm-test-1/mvvm-test-1/SplashScreen/SplashScreenViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "65">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "169BA5AC-E620-4358-BB1A-B74B1D45D623"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mvvm-test-1/SplashScreen/FilmService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "fetchFilms(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "169BA5AC-E620-4358-BB1A-B74B1D45D623 - fd4b9ced34a99af"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mvvm_test_1.FilmService.fetchFilms(completion: (Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "mvvm-test-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anroswart/Development/anro/mvvm-test-1/mvvm-test-1/SplashScreen/FilmService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "66">
+               </Location>
+               <Location
+                  uuid = "169BA5AC-E620-4358-BB1A-B74B1D45D623 - cc259f0939e02dd1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;mvvm_test_1.Film&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in mvvm_test_1.FilmService.fetchFilms(completion: (Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "mvvm-test-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anroswart/Development/anro/mvvm-test-1/mvvm-test-1/SplashScreen/FilmService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "109">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "05E95BD0-4F85-4E89-95E6-5E591B1AD40A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mvvm-test-1/SplashScreen/FilmService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "fetchFilms(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "05E95BD0-4F85-4E89-95E6-5E591B1AD40A - cc259f0939e02df2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;mvvm_test_1.Film&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in mvvm_test_1.FilmService.fetchFilms(completion: (Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "mvvm-test-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anroswart/Development/anro/mvvm-test-1/mvvm-test-1/SplashScreen/FilmService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "127">
+               </Location>
+               <Location
+                  uuid = "05E95BD0-4F85-4E89-95E6-5E591B1AD40A - cc259f0939e02df2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;mvvm_test_1.Film&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in mvvm_test_1.FilmService.fetchFilms(completion: (Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "mvvm-test-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anroswart/Development/anro/mvvm-test-1/mvvm-test-1/SplashScreen/FilmService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "225">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E56309AC-5068-4C10-B979-03FC0D8F9908"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mvvm-test-1/Networking/SWAPIClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "fetchFilms(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CA752666-EF48-489F-AF0E-804411A91269"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mvvm-test-1/Networking/SWAPIClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "getJSON(fromURL:withDecodableType:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CA752666-EF48-489F-AF0E-804411A91269 - 76f729f3e02e3ca1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in mvvm_test_1.SWAPIClient.getJSON&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(fromURL: Swift.String, withDecodableType: &#x3c4;_0_0.Type, completion: (Swift.Optional&lt;&#x3c4;_0_0&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "mvvm-test-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anroswart/Development/anro/mvvm-test-1/mvvm-test-1/Networking/SWAPIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "1914">
+               </Location>
+               <Location
+                  uuid = "CA752666-EF48-489F-AF0E-804411A91269 - 76f729f3e02e3ca1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in mvvm_test_1.SWAPIClient.getJSON&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(fromURL: Swift.String, withDecodableType: &#x3c4;_0_0.Type, completion: (Swift.Optional&lt;&#x3c4;_0_0&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "mvvm-test-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anroswart/Development/anro/mvvm-test-1/mvvm-test-1/Networking/SWAPIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "441">
+               </Location>
+               <Location
+                  uuid = "CA752666-EF48-489F-AF0E-804411A91269 - 76f729f3e02e3ca1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in mvvm_test_1.SWAPIClient.getJSON&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(fromURL: Swift.String, withDecodableType: &#x3c4;_0_0.Type, completion: (Swift.Optional&lt;&#x3c4;_0_0&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "mvvm-test-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anroswart/Development/anro/mvvm-test-1/mvvm-test-1/Networking/SWAPIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "591">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E0811D66-9610-499F-AE20-07A232110F32"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mvvm-test-1/Networking/SWAPIClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "getJSON(fromURL:withDecodableType:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C0870741-DE45-4BFE-AE9F-36FB42F38397"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mvvm-test-1/Networking/SWAPIClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "getJSON(fromURL:withDecodableType:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C0870741-DE45-4BFE-AE9F-36FB42F38397 - 76f729f3e02e3cc0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in mvvm_test_1.SWAPIClient.getJSON&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(fromURL: Swift.String, withDecodableType: &#x3c4;_0_0.Type, completion: (Swift.Optional&lt;&#x3c4;_0_0&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "mvvm-test-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anroswart/Development/anro/mvvm-test-1/mvvm-test-1/Networking/SWAPIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "1749">
+               </Location>
+               <Location
+                  uuid = "C0870741-DE45-4BFE-AE9F-36FB42F38397 - 76f729f3e02e3cc0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in mvvm_test_1.SWAPIClient.getJSON&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(fromURL: Swift.String, withDecodableType: &#x3c4;_0_0.Type, completion: (Swift.Optional&lt;&#x3c4;_0_0&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "mvvm-test-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anroswart/Development/anro/mvvm-test-1/mvvm-test-1/Networking/SWAPIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "1844">
+               </Location>
+               <Location
+                  uuid = "C0870741-DE45-4BFE-AE9F-36FB42F38397 - f7960570ea62e623"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mvvm_test_1.SWAPIClient.getJSON&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(fromURL: Swift.String, withDecodableType: &#x3c4;_0_0.Type, completion: (Swift.Optional&lt;&#x3c4;_0_0&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "mvvm-test-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anroswart/Development/anro/mvvm-test-1/mvvm-test-1/Networking/SWAPIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "619">
+               </Location>
+               <Location
+                  uuid = "C0870741-DE45-4BFE-AE9F-36FB42F38397 - 76f729f3e02e3cc0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in mvvm_test_1.SWAPIClient.getJSON&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(fromURL: Swift.String, withDecodableType: &#x3c4;_0_0.Type, completion: (Swift.Optional&lt;&#x3c4;_0_0&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "mvvm-test-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anroswart/Development/anro/mvvm-test-1/mvvm-test-1/Networking/SWAPIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "423">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "68410332-F61C-4799-85BB-4F017F88CBDC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mvvm-test-1/Networking/SWAPIClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "getJSON(fromURL:withDecodableType:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "68410332-F61C-4799-85BB-4F017F88CBDC - 76f729f3e02e326f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in mvvm_test_1.SWAPIClient.getJSON&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(fromURL: Swift.String, withDecodableType: &#x3c4;_0_0.Type, completion: (Swift.Optional&lt;&#x3c4;_0_0&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "mvvm-test-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anroswart/Development/anro/mvvm-test-1/mvvm-test-1/Networking/SWAPIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "4098">
+               </Location>
+               <Location
+                  uuid = "68410332-F61C-4799-85BB-4F017F88CBDC - 76f729f3e02e326f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in mvvm_test_1.SWAPIClient.getJSON&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(fromURL: Swift.String, withDecodableType: &#x3c4;_0_0.Type, completion: (Swift.Optional&lt;&#x3c4;_0_0&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "mvvm-test-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anroswart/Development/anro/mvvm-test-1/mvvm-test-1/Networking/SWAPIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "2131">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "82665EBA-8A75-4DC4-86E8-C6D286B10BD1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mvvm-test-1/Networking/SWAPIClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "getJSON(fromURL:withDecodableType:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "82665EBA-8A75-4DC4-86E8-C6D286B10BD1 - 76f729f3e02e33c8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in mvvm_test_1.SWAPIClient.getJSON&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(fromURL: Swift.String, withDecodableType: &#x3c4;_0_0.Type, completion: (Swift.Optional&lt;&#x3c4;_0_0&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "mvvm-test-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anroswart/Development/anro/mvvm-test-1/mvvm-test-1/Networking/SWAPIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "2630">
+               </Location>
+               <Location
+                  uuid = "82665EBA-8A75-4DC4-86E8-C6D286B10BD1 - 76f729f3e02e33c8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in mvvm_test_1.SWAPIClient.getJSON&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(fromURL: Swift.String, withDecodableType: &#x3c4;_0_0.Type, completion: (Swift.Optional&lt;&#x3c4;_0_0&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "mvvm-test-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anroswart/Development/anro/mvvm-test-1/mvvm-test-1/Networking/SWAPIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "1131">
+               </Location>
+               <Location
+                  uuid = "82665EBA-8A75-4DC4-86E8-C6D286B10BD1 - 76f729f3e02e33c8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in mvvm_test_1.SWAPIClient.getJSON&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(fromURL: Swift.String, withDecodableType: &#x3c4;_0_0.Type, completion: (Swift.Optional&lt;&#x3c4;_0_0&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "mvvm-test-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anroswart/Development/anro/mvvm-test-1/mvvm-test-1/Networking/SWAPIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "1695">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4148AF2F-5686-4638-9B5A-8790BC56D1C4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mvvm-test-1/Networking/SWAPIClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "getJSON(fromURL:withDecodableType:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4148AF2F-5686-4638-9B5A-8790BC56D1C4 - 76f729f3e02e33c8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in mvvm_test_1.SWAPIClient.getJSON&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(fromURL: Swift.String, withDecodableType: &#x3c4;_0_0.Type, completion: (Swift.Optional&lt;&#x3c4;_0_0&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "mvvm-test-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anroswart/Development/anro/mvvm-test-1/mvvm-test-1/Networking/SWAPIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "2630">
+               </Location>
+               <Location
+                  uuid = "4148AF2F-5686-4638-9B5A-8790BC56D1C4 - 76f729f3e02e33eb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in mvvm_test_1.SWAPIClient.getJSON&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(fromURL: Swift.String, withDecodableType: &#x3c4;_0_0.Type, completion: (Swift.Optional&lt;&#x3c4;_0_0&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "mvvm-test-1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anroswart/Development/anro/mvvm-test-1/mvvm-test-1/Networking/SWAPIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "638">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

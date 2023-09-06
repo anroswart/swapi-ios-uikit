@@ -20,7 +20,6 @@ class FilmListViewController: UIViewController {
         title = "Star Wars Films"
     }
     
-    // Inject FilmDetailViewController dependencies
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if
             let destination = (segue.destination as? UINavigationController)?.topViewController as? FilmDetailViewController,

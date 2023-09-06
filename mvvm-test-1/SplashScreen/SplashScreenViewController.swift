@@ -8,7 +8,7 @@ class SplashScreenViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var splashLogoImageView: UIImageView!
     
-    private let filmMapper = FilmMapper()
+    private let filmService = FilmService()
     
     // Animation state handling
     private var networkingComplete = false
@@ -25,7 +25,7 @@ class SplashScreenViewController: UIViewController {
     private func getFilmData() {
         networkingComplete = false
         configureLogoAnimation()
-        filmMapper.fetchFilms { error in
+        filmService.fetchFilms { error in
             self.networkingComplete = true
             self.configureNetworkingCompletion(withError: error)
             if (self.scaleAnimationComplete && self.rotateAnimationComplete) {
@@ -96,7 +96,7 @@ class SplashScreenViewController: UIViewController {
     // Inject FilmListViewController dependencies
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = (segue.destination as? UINavigationController)?.topViewController as? FilmListViewController {
-            destination.viewModel = FilmListViewModel(films: filmMapper.films)
+            destination.viewModel = FilmListViewModel(films: filmService.films)
             stopAnimations()
         }
     }

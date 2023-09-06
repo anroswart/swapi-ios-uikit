@@ -8,10 +8,12 @@ class SWAPIClient: NSObject {
     }
     
     func fetchFilms(completion: @escaping([Film]?, Error?) -> Void) {
-        let filmsURL: String = "https://swapi.co/api/films/"
-        getJSON(fromURL: filmsURL, withDecodableType: SWAPIFilmsResponse.self) { (responseObject, error) in
-            completion(responseObject?.results, error)
-        }
+        let filmsURL: String = "https://swapi.dev/api/films/"
+        getJSON(
+            fromURL: filmsURL,
+            withDecodableType: SWAPIFilmsResponse.self) { (responseObject, error) in
+                completion(responseObject?.results, error)
+            }
     }
     
     func fetchCharacters(characterURLs: [String], completion: @escaping(_ filmCharacters: [String]?, Error?)->()) {
@@ -19,11 +21,16 @@ class SWAPIClient: NSObject {
         var filmCharacterNames = [String]()
         for url in characterURLs {
             group.enter()
-            getJSON(fromURL: url, withDecodableType: SWAPICharacterResponse.self) { (responseObject, error) in
-                guard error == nil, let filmCharacter = responseObject?.name else { completion(nil, error); return }
-                filmCharacterNames.append(filmCharacter)
-                group.leave()
-            }
+            getJSON(
+                fromURL: url,
+                withDecodableType: SWAPICharacterResponse.self) { (responseObject, error) in
+                    if
+                        error != nil,
+                        let filmCharacter = responseObject?.name {
+                        filmCharacterNames.append(filmCharacter)
+                    }
+                    group.leave()
+                }
         }
         group.notify(queue: .main) {
             completion(filmCharacterNames, nil)
@@ -32,15 +39,19 @@ class SWAPIClient: NSObject {
     
     func fetchPostersAndRatings(forTitle title: String, completion: @escaping(_ imageData: Data?, _ rating: Double?, _ error: Error?) -> Void) {
         self.searchFilms(forTitle: title) { (filmMetadata, error) in
-            guard let tmdbImageURL = filmMetadata?.posterPath, !tmdbImageURL.isEmpty else {
+            guard
+                let tmdbImageURL = filmMetadata?.posterPath,
+                !tmdbImageURL.isEmpty else {
                 completion(nil, filmMetadata?.rating, error)
                 return
             }
             let urlString: String = "https://image.tmdb.org/t/p/w500\(tmdbImageURL)"
             guard let url = URL(string: urlString) else { return }
-            self.session.dataTask(with: url, completionHandler: { (posterImageData, response, error) in
-                completion(posterImageData, filmMetadata?.rating, error)
-            }).resume()
+            self.session.dataTask(
+                with: url,
+                completionHandler: { (posterImageData, response, error) in
+                    completion(posterImageData, filmMetadata?.rating, error)
+                }).resume()
         }
     }
     
@@ -49,10 +60,12 @@ class SWAPIClient: NSObject {
         let title = "Star Wars: \(title)"
         guard let movieTitle = title.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }
         let tmdbURLString: String = "https://api.themoviedb.org/3/search/movie?include_adult=false&query=\(movieTitle)&language=en-US&api_key=026ed4b253a6531903d424d2f2008911"
-        getJSON(fromURL: tmdbURLString, withDecodableType: TMDBSearchResponse.self) { (responseObject, error) in
-            let validObjects = responseObject?.results.filter { $0.posterPath != nil }
-            completion(validObjects?.first, error)
-        }
+        getJSON(
+            fromURL: tmdbURLString,
+            withDecodableType: TMDBSearchResponse.self) { (responseObject, error) in
+                let validObjects = responseObject?.results.filter { $0.posterPath != nil }
+                completion(validObjects?.first, error)
+            }
     }
     
     func getJSON<T: Decodable>(fromURL urlString: String, withDecodableType: T.Type, completion: @escaping(_ responseObject: T?, Error?) -> Void) {
@@ -61,16 +74,25 @@ class SWAPIClient: NSObject {
         urlRequest.httpMethod = "GET"
         self.session.dataTask(with: urlRequest) { (data, response, error) in
             guard error == nil, let data = data else {
-                print("DataTask failed for \(urlString). \nError: \(String(describing: error))")
+                debugPrint("DataTask failed for \(urlString). \nError: \(String(describing: error))")
                 completion(nil, error)
                 return
             }
             do {
+                if let jsonData = try? JSONSerialization.jsonObject(with: data, options: []) {
+                    if let jsonString = try? JSONSerialization.data(withJSONObject: jsonData, options: .withoutEscapingSlashes),
+                       let string = String(data: jsonString, encoding: .utf8) {
+                        debugPrint("Response: ")
+                        debugPrint(string)
+                        debugPrint("")
+                    }
+                }
+                
                 let responseObject = try
-                    JSONDecoder().decode(T.self, from: data)
+                JSONDecoder().decode(T.self, from: data)
                 completion(responseObject, nil)
             } catch let decodingError {
-                print("Decoding JSON failed:", decodingError)
+                debugPrint("Decoding JSON failed:", decodingError)
                 completion(nil, nil)
             }
         }.resume()

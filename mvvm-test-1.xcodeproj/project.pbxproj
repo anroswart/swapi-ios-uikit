@@ -24,10 +24,10 @@
 		749F827824123B4500ADD0CA /* FilmMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749F827724123B4500ADD0CA /* FilmMocks.swift */; };
 		749F827C2412491000ADD0CA /* FilmDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749F827B2412491000ADD0CA /* FilmDetailViewModelTests.swift */; };
 		749F828024125F6900ADD0CA /* FilmCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749F827F24125F6900ADD0CA /* FilmCellTests.swift */; };
-		749F8289241275BE00ADD0CA /* BuildFile in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		749F8289241275BE00ADD0CA /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		74C26A66202A650D000DEF7E /* FilmListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C26A65202A650D000DEF7E /* FilmListViewModel.swift */; };
 		74C26A6D202B5778000DEF7E /* FilmDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C26A6C202B5778000DEF7E /* FilmDetailViewModel.swift */; };
-		74C26A6F202B57F1000DEF7E /* FilmMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C26A6E202B57F1000DEF7E /* FilmMapper.swift */; };
+		74C26A6F202B57F1000DEF7E /* FilmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C26A6E202B57F1000DEF7E /* FilmService.swift */; };
 		74C26A73202C4872000DEF7E /* FilmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C26A72202C4872000DEF7E /* FilmCell.swift */; };
 		74D30282240CCC33003D8AAA /* FilmMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D30281240CCC33003D8AAA /* FilmMapperTests.swift */; };
 		74D302B8240D661D003D8AAA /* SWAPIFilmsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 74D302B7240D661D003D8AAA /* SWAPIFilmsResponse.json */; };
@@ -75,7 +75,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				749F8289241275BE00ADD0CA /* BuildFile in Embed Frameworks */,
+				749F8289241275BE00ADD0CA /* (null) in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,7 +106,7 @@
 		749F8281241273E600ADD0CA /* Cosmos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Cosmos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C26A65202A650D000DEF7E /* FilmListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmListViewModel.swift; sourceTree = "<group>"; };
 		74C26A6C202B5778000DEF7E /* FilmDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailViewModel.swift; sourceTree = "<group>"; };
-		74C26A6E202B57F1000DEF7E /* FilmMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmMapper.swift; sourceTree = "<group>"; };
+		74C26A6E202B57F1000DEF7E /* FilmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmService.swift; sourceTree = "<group>"; };
 		74C26A72202C4872000DEF7E /* FilmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmCell.swift; sourceTree = "<group>"; };
 		74D3027F240CCC32003D8AAA /* mvvm-test-1-UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mvvm-test-1-UnitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D30281240CCC33003D8AAA /* FilmMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmMapperTests.swift; sourceTree = "<group>"; };
@@ -295,7 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				749743502020B1160046DB63 /* SplashScreenViewController.swift */,
-				74C26A6E202B57F1000DEF7E /* FilmMapper.swift */,
+				74C26A6E202B57F1000DEF7E /* FilmService.swift */,
 			);
 			path = SplashScreen;
 			sourceTree = "<group>";
@@ -505,15 +505,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-mvvm-test-1/Pods-mvvm-test-1-resources.sh",
 				"${PODS_ROOT}/StarWarsTextView/Library/NewsGothicStd-Bold.otf",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NewsGothicStd-Bold.otf",
 			);
@@ -571,15 +567,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-mvvm-test-1-UnitTests/Pods-mvvm-test-1-UnitTests-resources.sh",
 				"${PODS_ROOT}/StarWarsTextView/Library/NewsGothicStd-Bold.otf",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NewsGothicStd-Bold.otf",
 			);
@@ -599,7 +591,7 @@
 				74E0E3182029C308001E7CF9 /* FilmDetailViewController.swift in Sources */,
 				74C26A6D202B5778000DEF7E /* FilmDetailViewModel.swift in Sources */,
 				7475C4D1202608000073AED7 /* Film.swift in Sources */,
-				74C26A6F202B57F1000DEF7E /* FilmMapper.swift in Sources */,
+				74C26A6F202B57F1000DEF7E /* FilmService.swift in Sources */,
 				74C26A73202C4872000DEF7E /* FilmCell.swift in Sources */,
 				74E0E3162029C297001E7CF9 /* FilmListViewController.swift in Sources */,
 				745941AC240941A000919B1D /* TMDBSearchResponse.swift in Sources */,
@@ -781,7 +773,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TS48THZ29N;
 				INFOPLIST_FILE = "mvvm-test-1/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mvvm-test-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -798,7 +790,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TS48THZ29N;
 				INFOPLIST_FILE = "mvvm-test-1/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mvvm-test-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";

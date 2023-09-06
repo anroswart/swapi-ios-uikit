@@ -13,7 +13,7 @@ DEPENDENCIES:
   - StarWarsTextView
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Cosmos
     - Realm
     - RealmSwift
@@ -27,4 +27,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 2dba5cbb6d0f8316c199e35eedb52cd8be780394
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.12.1

@@ -1,7 +1,7 @@
 import Foundation
 import RealmSwift
 
-class FilmMapper: NSObject {
+class FilmService: NSObject {
     private var swapiClient: SWAPIClient
     private var filmCache: FilmCacheInteractor
     var films = [Film]()
@@ -40,11 +40,16 @@ class FilmMapper: NSObject {
     private func getFilmsCharactersAndDoPosterCall(withCompletion completion: @escaping (Error?) -> Void) {
         let charactersDispatchGroup = DispatchGroup()
         for (index, film) in self.films.enumerated() {
+            guard film.characterURLs.count > 0 else {
+                continue
+            }
             charactersDispatchGroup.enter()
-            guard film.characterURLs.count > 0 else { charactersDispatchGroup.leave(); continue }
             self.swapiClient.fetchCharacters(characterURLs: Array(film.characterURLs)) { (filmCharacters, error) in
-                guard error == nil, let characters = filmCharacters else { charactersDispatchGroup.leave(); return }
-                DispatchQueue.main.async { self.films[index].characterList.append(objectsIn: characters) }
+                if error == nil, let characters = filmCharacters {
+                    DispatchQueue.main.async {
+                        self.films[index].characterList.append(objectsIn: characters)
+                    }
+                }
                 charactersDispatchGroup.leave()
             }
         }

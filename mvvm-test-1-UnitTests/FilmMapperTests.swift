@@ -9,7 +9,7 @@ class FilmMapperTests: XCTestCase {
     // Made static to cater for class func setUp
     private static var session: URLSessionMock!
     private static var filmCache: FilmCacheInteractor!
-    private static var serviceUnderTest: FilmMapper!
+    private static var serviceUnderTest: FilmService!
 
     // Made class func so it executes only once
     override class func setUp() {
