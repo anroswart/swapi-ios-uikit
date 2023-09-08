@@ -1,1 +1,1 @@
-SWAPI iOS App using MVVM
+SWAPI iOS App using UIKit
